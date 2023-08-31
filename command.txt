@@ -1,0 +1,3 @@
+python inference.py --data /root/projects/tracking/bytetrack/data/test_video_41.mp4 --output /root/projects/tracking/bytetrack/ByteTrack/output_json/test_video_41_pretrained.json --weights /root/projects/tracking/bytetrack/yolov7.pt --classes pretrained
+
+python inference.py --data /root/projects/tracking/bytetrack/data/test_video_20.mp4 --output /root/projects/tracking/bytetrack/ByteTrack/output_json/test_video_20_pretrained.json --weights /root/projects/tracking/bytetrack/yolov7.pt --classes pretrained 
