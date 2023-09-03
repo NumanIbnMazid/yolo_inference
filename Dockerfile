@@ -18,6 +18,9 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
+# Clone the yolov7 Git repository
+# RUN git clone https://github.com/WongKinYiu/yolov7.git
+
 # use the new environment - important
 SHELL ["conda", "run", "-n", "env", "/bin/bash", "-c"]
 
@@ -36,7 +39,3 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
 # Make the entrypoint script executable
 RUN chmod +x entrypoint.sh
-
-# Set the entrypoint script as the default command to run
-ENTRYPOINT ["./entrypoint.sh"]
-

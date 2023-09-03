@@ -1,0 +1,7 @@
+services:
+  yolo:
+    image: yolo:development
+    build:
+      dockerfile: ./Dockerfile
+    runtime: nvidia
+    command: ./entrypoint.sh
