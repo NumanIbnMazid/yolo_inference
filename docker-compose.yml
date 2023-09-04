@@ -1,6 +1,6 @@
 services:
   yolo:
-    image: yolo:development
+    image: yolo-standalone:development
     build:
       dockerfile: ./Dockerfile
     runtime: nvidia
