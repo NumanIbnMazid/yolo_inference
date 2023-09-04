@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: yolo-standalone
+  namespace: flink
+spec:
+  restartPolicy: Never
+  containers:
+    - name: yolo-standalone
+      image: sunnyselise/tellygraph:yolo-standalone
+      imagePullPolicy: Always
+      resources:
+        limits:
+          nvidia.com/gpu: 1 # requesting 1 GPU
+  imagePullSecrets:
+    - name: regcred
+  tolerations:
+  - key: nvidia.com/gpu
+    operator: Exists
+    effect: NoSchedule
+  - key: instancetype
+    operator: Exists
+    effect: NoSchedule
