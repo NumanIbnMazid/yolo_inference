@@ -26,7 +26,7 @@ def inference(frame, width, height, classes, model, byte_tracker, data, frame_id
         frame,
     )
     # print(results.print())
-
+    print(f"Model Detections Pred: {results.pred}, Model Detections Name: {model.names}")
     # post processing detection result
     detections = Detection.from_results(
         pred=results.pred[0].cpu().numpy(), names=model.names

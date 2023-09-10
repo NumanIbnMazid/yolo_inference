@@ -42,4 +42,3 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 RUN chmod +x entrypoint.sh
 
 CMD ["./entrypoint.sh"]
-
