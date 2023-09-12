@@ -161,9 +161,9 @@ if __name__ == "__main__":
     yolo_ball_model = load_object_detection_model(
         "/app/yolov7", "/app/Ball_Classifier_Trained.pt"
     )
-    yolo_player_model = load_object_detection_model(
-        "/app/yolov7", "/app/Player_Classifier_Pretrained.pt"
-    )
+    # yolo_player_model = load_object_detection_model(
+    #     "/app/yolov7", "/app/Player_Classifier_Pretrained.pt"
+    # )
 
     frame_iterator = iter(
         generate_frames(
@@ -188,11 +188,11 @@ if __name__ == "__main__":
         print(f"Ball Inference Time: {ball_inference_end - ball_inference_start}")
 
         # Player Inference
-        player_inference_start = time.time()
-        yolo_player_inference = YoloFootballInference(frame, yolo_player_model)
-        player_inference_result = yolo_player_inference.inference()
-        player_inference_end = time.time()
-        print(f"Player Inference Time: {player_inference_end - player_inference_start}")
-        
+        # player_inference_start = time.time()
+        # yolo_player_inference = YoloFootballInference(frame, yolo_player_model)
+        # player_inference_result = yolo_player_inference.inference()
+        # player_inference_end = time.time()
+        # print(f"Player Inference Time: {player_inference_end - player_inference_start}")
+
     total_end = time.time()
     print(f"Total Time: {total_end - total_start}")

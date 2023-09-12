@@ -20,7 +20,7 @@ def generate_frames(video_file: str, resize_width: int, resize_height: int) -> G
     video = cv2.VideoCapture(video_file)
 
     while video.isOpened():
-        start = time.time()
+        # start = time.time()
         success, frame = video.read()
 
         # if not success:
@@ -36,8 +36,8 @@ def generate_frames(video_file: str, resize_width: int, resize_height: int) -> G
             resized_frame = cv2.resize(frame, (resize_width, resize_height))
             # cv2.imwrite( '/root/projects/tracking/bytetrack/'+'resized'+".jpg", resized_frame)
             # print(resized_frame.shape)
-            end = time.time()
-            print("frame itereator_###:" + str(end - start) + " seconds")
+            # end = time.time()
+            # print("frame itereator_###:" + str(end - start) + " seconds")
 
             yield resized_frame
 
